@@ -1,0 +1,64 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="index.css">
+       <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class='container' id="container">
+            <header>
+                <h1 class='title'>Jimmy's Diner</h1>
+                <p class='subtitle'>The best burgers and pizzas in town.</p>
+            </header>
+            <main>
+                <section class='menu' id='menu'>
+                    <!-- Menu will be rendered with JS -->
+                </section>
+                <section class='order hidden' id='order'>
+                    <h2 class='order-title' id='order-id'>Your order</h2>
+                    <div class='order-container' id='order-container'>
+                    <!-- Order will be rendered with JS -->
+                    </divdiv>
+                </section>
+            </main>
+            <dialog id="modal-dialog">
+                <form class='payment-modal' id='payment-modal'>
+                    <h2>Enter card details</h2>
+                    <input 
+                        class='payment-modal-input' 
+                        type='text' name="fullName" 
+                        id="fullName" 
+                        placeholder="Enter your full name" 
+                        required>
+                    <input 
+                        class='payment-modal-input' 
+                        type='text' 
+                        name="creditCardNumber" 
+                        id="creditCardNumber" 
+                        inputmode="numeric"
+                        minlength="16"
+                        maxlength="16"
+                        pattern ="\d{16}"
+                        placeholder="Enter card number" 
+                        required>
+                    <input 
+                        class='payment-modal-input' 
+                        type='text' 
+                        name="cvv" 
+                        id="cvv" 
+                        inputmode="numeric"
+                        minlength="3"
+                        maxlength="3"
+                        pattern="\d{3}"
+                        placeholder="Enter CVV" 
+                        required>
+                    <button class="btn-pay" id="btn-pay">Pay</button>                      
+                </form>
+            </dialog>
+        </div>
+	<script src='index.js' type='module'></script>
+    </body>
+</html>
+

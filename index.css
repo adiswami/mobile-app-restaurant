@@ -1,0 +1,253 @@
+body {
+    font-family: "Smythe", system-ui;
+    font-weight: 400;
+}
+
+body, p, h1, h2, h3, header, form {
+    margin: 0;
+} 
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url('./images/header-bg-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 167px;
+}
+
+.title, .subtitle {
+    color:white;
+    margin-left: 45px;
+}
+
+.title {
+    padding-top: 45px;
+    font-family: 40px;
+    font-weight: 400;
+}
+
+.subtitle {
+    padding-top: 5px;
+    font-family: 20px;
+    font-weight: 100;
+}
+
+/* Menu Section */
+
+.menu {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    width: 500px;
+    height: 140px;
+    margin: 50px 50px 0 50px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.item-img {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.item-title {
+    font-size: 28px;
+    margin-bottom: 4px;
+    font-weight: 300;
+}
+
+.item-ingredients {
+    font-size: 16px;
+    color: #8b8b8b;
+    margin-bottom: 12px;
+}
+
+.item-price {
+    font-size: 20px;;
+}
+
+.btn-add {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    background: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+}
+
+/* Order Section */
+
+.order {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.order-title {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 28px;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.order-items {
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid black;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.order-item-title-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.order-item-title {
+    font-size: 28px;
+}
+
+.order-item-subtotal-container {
+    font-size: 20px;
+}
+
+
+.btn-remove-item {
+    all: unset;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: #8b8b8b;
+    font-size: 12px;
+}
+
+.order-item-subtotal-container {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-total-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.order-total-txt {
+    font-size: 28px;
+}
+
+.order-total {
+    font-size: 20px;
+}
+
+.btn-submit-order {
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Payment Modal */
+
+#modal-dialog {
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    padding: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+}
+
+
+#modal-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust 0.7 for darkness (0.0 to 1.0) */
+    backdrop-filter: blur(1px);           /* Optional: blurs the content behind */
+}
+
+.payment-modal > h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.payment-modal-input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.btn-pay {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.thank-you-container {
+    display: flex;
+    width: 500px;
+    height: 140px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECFDF5;
+    color: #065F46;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
