@@ -26,13 +26,13 @@ header {
 
 .title {
     padding-top: 45px;
-    font-family: 40px;
+    font-size: 40px;
     font-weight: 400;
 }
 
 .subtitle {
     padding-top: 5px;
-    font-family: 20px;
+    font-size: 20px;
     font-weight: 100;
 }
 
@@ -141,11 +141,6 @@ header {
     font-size: 28px;
 }
 
-.order-item-subtotal-container {
-    font-size: 20px;
-}
-
-
 .btn-remove-item {
     all: unset;
     font-size: 12px;
@@ -157,6 +152,7 @@ header {
 
 .order-item-subtotal-container {
     display: flex;
+    font-size: 20px;
     width: 80px;
     justify-content: space-between;
     align-items: center;
@@ -211,6 +207,12 @@ header {
     backdrop-filter: blur(1px);           /* Optional: blurs the content behind */
 }
 
+.payment-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .payment-modal > h2 {
     margin-bottom: 40px;
     font-size: 24px;
@@ -219,7 +221,7 @@ header {
 .payment-modal-input {
     width: 100%;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 
@@ -234,6 +236,8 @@ header {
     border: none;
     border-radius: 4px;
 }
+
+/* Thank You Container */
 
 .thank-you-container {
     display: flex;

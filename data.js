@@ -1,26 +1,26 @@
 const menuArray = [
     {
+        id: 0,
         itemName: "Pizza",
         ingredients: ["pepperoni", "mushrom", "mozarella"],
-        id: 0,
         price: 14,
         emoji: "🍕",
         imgPath: './images/item-graphic-pizza.png'
     },
     {
+        id: 1,
         itemName: "Hamburger",
         ingredients: ["beef", "cheese", "lettuce"],
         price: 12,
         emoji: "🍔",
-        id: 1,
         imgPath: './images/item-graphic-hamburger.png'
     },
-        {
+    {
+        id: 2,
         itemName: "Beer",
-        ingredients: ["grain, hops, yeast, water"],
+        ingredients: ["grain", "hops", "yeast", "water"],
         price: 12,
         emoji: "🍺",
-        id: 2,
         imgPath: './images/item-graphic-beer.png'
     }
 ]

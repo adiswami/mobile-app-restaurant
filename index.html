@@ -19,19 +19,22 @@
                 <section class='order hidden' id='order'>
                     <h2 class='order-title' id='order-id'>Your order</h2>
                     <div class='order-container' id='order-container'>
-                    <!-- Order will be rendered with JS -->
-                    </divdiv>
+                        <!-- Order will be rendered with JS -->
+                    </div>
                 </section>
             </main>
             <dialog id="modal-dialog">
                 <form class='payment-modal' id='payment-modal'>
                     <h2>Enter card details</h2>
+                    <label class="payment-form-label" for="fullName">Full Name:</label>
                     <input 
                         class='payment-modal-input' 
-                        type='text' name="fullName" 
+                        type='text' 
+                        name="fullName" 
                         id="fullName" 
-                        placeholder="Enter your full name" 
+                        placeholder="John Wick" 
                         required>
+                    <label class="payment-form-label" for="creditCardNumber">Credit Card Number:</label>
                     <input 
                         class='payment-modal-input' 
                         type='text' 
@@ -41,8 +44,9 @@
                         minlength="16"
                         maxlength="16"
                         pattern ="\d{16}"
-                        placeholder="Enter card number" 
+                        placeholder="1234567891234567" 
                         required>
+                    <label class="payment-form-label" for="cvv">CVV:</label>
                     <input 
                         class='payment-modal-input' 
                         type='text' 
@@ -52,7 +56,7 @@
                         minlength="3"
                         maxlength="3"
                         pattern="\d{3}"
-                        placeholder="Enter CVV" 
+                        placeholder="999" 
                         required>
                     <button class="btn-pay" id="btn-pay">Pay</button>                      
                 </form>

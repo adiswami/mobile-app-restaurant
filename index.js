@@ -40,9 +40,6 @@ orderContainerEl.addEventListener('click',function(e){
     }
 })
 
-container.addEventListener('click',function(e){
-    console.log(e.target)
-})
 
 modal.addEventListener('click',function(e){
     const rect = modal.getBoundingClientRect()
@@ -63,7 +60,6 @@ paymentForm.addEventListener('submit', function(e) {
   e.preventDefault(); // Prevents the default full page reload
   const formData = new FormData(e.target);
   // Access values:
-  console.log(formData.get('fullName'));
   const name = formData.get('fullName')
   
   order.innerHTML = `
@@ -92,12 +88,17 @@ function addItem(itemId) {
 }
 
 function removeItem(itemId) {
-        const existingItem = orderSummary.find(item => item.id.toString() === itemId)
+        const idx = orderSummary.findIndex(item => item.id.toString() === itemId)
+
+        if (idx === -1) return orderSummary
+
+        const existingItem = orderSummary[idx]
+
         if(existingItem.qty > 1){
             existingItem.qty--
             }      
         else {
-            orderSummary = orderSummary.filter(item => item.id.toString() !== itemId)
+            orderSummary.splice(idx, 1)
         }
         return orderSummary
 }
@@ -106,11 +107,12 @@ function calculateOrderTotal(order){
     const orderTotal = order.reduce((total, item) => {
         return total + (item.price * item.qty)
     },0)
+    return orderTotal
 }
 
 
 function renderOrder(order){
-    const orderGrandTotal = order.reduce((sum,item) => sum + (item.qty * item.price),0)
+    const orderGrandTotal = calculateOrderTotal(order)
 
     const orderItemsHtml = order.map(function(item){
         let {id, itemName, qty, price} = item
@@ -143,9 +145,7 @@ function renderOrder(order){
 }
 
 function submitOrder() {
-    // Select the <dialog> element, not the inner <form>
-    const modal = document.getElementById('modal-dialog')
-    modal.showModal() // This triggers the backdrop automatically
+    modal.showModal()
 }
 
 
