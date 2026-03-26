@@ -4,7 +4,6 @@ import menuArray from './data.js'
 const menuEl = document.getElementById('menu')
 const orderContainerEl = document.getElementById('order-container')
 const order = document.getElementById('order')
-const container = document.getElementById('container')
 const modal = document.getElementById('modal-dialog')
 const paymentForm = document.getElementById('payment-modal')
 
@@ -115,7 +114,7 @@ function renderOrder(order){
     const orderGrandTotal = calculateOrderTotal(order)
 
     const orderItemsHtml = order.map(function(item){
-        let {id, itemName, qty, price} = item
+        const {id, itemName, qty, price} = item
         const itemSubtotal = qty*price
 
     return `

@@ -193,7 +193,6 @@ header {
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 420px;
     width: 360px;
     background-color: white;
     padding: 40px;
@@ -221,7 +220,6 @@ header {
 .payment-modal-input {
     width: 100%;
     padding: 20px;
-    margin-bottom: 10px;
     font-size: 20px;
 }
 
