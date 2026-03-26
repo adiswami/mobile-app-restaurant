@@ -150,7 +150,7 @@ function submitOrder() {
 
 function renderMenu(menuArr){
     return menuArr.map(function(menuObj){
-        let {id, imgPath, itemName, ingredients, price} = menuObj
+        const {id, imgPath, itemName, ingredients, price} = menuObj
         return `
         <div class='menu-item' data-id='${id}'>
             <img class="item-img" src='${imgPath}' alt='Icon for ${itemName}'>
